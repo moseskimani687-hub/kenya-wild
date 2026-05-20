@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discover Kenya | My First Professional Website</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins', sans-serif;
+        }
+
+        body{
+            background:#f5f7fa;
+            color:#222;
+            line-height:1.6;
+        }
+
+        /* Navigation */
+        nav{
+            background:#0b3d91;
+            color:white;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:15px 50px;
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        nav h1{
+            font-size:28px;
+        }
+
+        nav ul{
+            display:flex;
+            list-style:none;
+        }
+
+        nav ul li{
+            margin-left:25px;
+        }
+
+        nav ul li a{
+            color:white;
+            text-decoration:none;
+            font-weight:500;
+            transition:0.3s;
+        }
+
+        nav ul li a:hover{
+            color:#ffd700;
+        }
+
+        /* Hero Section */
+        .hero{
+            height:90vh;
+            background:url('images/kenya.jpg') center/cover no-repeat;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            color:white;
+            position:relative;
+        }
+
+        .hero::before{
+            content:'';
+            position:absolute;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.5);
+        }
+
+        .hero-content{
+            position:relative;
+            z-index:1;
+        }
+
+        .hero h2{
+            font-size:60px;
+            margin-bottom:20px;
+        }
+
+        .hero p{
+            font-size:22px;
+            margin-bottom:25px;
+        }
+
+        .btn{
+            background:#ffd700;
+            color:black;
+            padding:14px 30px;
+            text-decoration:none;
+            border-radius:30px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:white;
+            transform:scale(1.05);
+        }
+
+        /* About */
+        .about{
+            padding:80px 50px;
+            text-align:center;
+        }
+
+        .about h2{
+            font-size:40px;
+            color:#0b3d91;
+            margin-bottom:20px;
+        }
+
+        .about p{
+            max-width:900px;
+            margin:auto;
+            font-size:18px;
+        }
+
+        /* Cards */
+        .places{
+            padding:70px 50px;
+            background:white;
+        }
+
+        .places h2{
+            text-align:center;
+            font-size:40px;
+            color:#0b3d91;
+            margin-bottom:40px;
+        }
+
+        .card-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:30px;
+        }
+
+        .card{
+            background:#f9f9f9;
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 8px 20px rgba(0,0,0,0.1);
+            transition:0.4s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+        }
+
+        .card img{
+            width:100%;
+            height:220px;
+            object-fit:cover;
+        }
+
+        .card-content{
+            padding:20px;
+        }
+
+        .card-content h3{
+            margin-bottom:10px;
+            color:#0b3d91;
+        }
+
+        /* Table */
+        .table-section{
+            padding:70px 50px;
+        }
+
+        .table-section h2{
+            text-align:center;
+            margin-bottom:30px;
+            color:#0b3d91;
+            font-size:40px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:white;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        table th{
+            background:#0b3d91;
+            color:white;
+            padding:15px;
+        }
+
+        table td{
+            padding:15px;
+            text-align:center;
+        }
+
+        table tr:nth-child(even){
+            background:#f2f2f2;
+        }
+
+        /* Quote */
+        .quote{
+            background:#0b3d91;
+            color:white;
+            padding:60px 30px;
+            text-align:center;
+            font-size:28px;
+            font-style:italic;
+        }
+
+        /* Footer */
+        footer{
+            background:#111;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        footer p{
+            margin:5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h1>Discover Kenya</h1>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tourism</a></li>
+            <li><a href="#">Culture</a></li>
+            <li><a href="#">Wildlife</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h2>Welcome to Kenya</h2>
+
+            <p>
+                Experience the beauty, culture, wildlife,
+                and technology of the Pearl of Africa.
+            </p>
+
+            <a href="#" class="btn">Explore Kenya</a>
+
+        </div>
+
+    </section>
+
+    <!-- About -->
+    <section class="about">
+
+        <h2>About Kenya</h2>
+
+        <p>
+            Kenya is one of the most beautiful countries in Africa.
+            It is famous for wildlife safaris, beautiful beaches,
+            athletics, technology growth, and rich culture.
+            Millions of tourists visit Kenya every year to experience
+            its amazing beauty and friendly people.
+        </p>
+
+    </section>
+
+    <!-- Tourist Places -->
+    <section class="places">
+
+        <h2>Top Tourist Attractions</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+
+                <img src="images/maasai-mara.jpg" alt="Maasai Mara">
+
+                <div class="card-content">
+
+                    <h3>Maasai Mara</h3>
+
+                    <p>
+                        One of the best wildlife reserves in Africa,
+                        famous for lions and the Great Migration.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="images/diani.jpg" alt="Diani Beach">
+
+                <div class="card-content">
+
+                    <h3>Diani Beach</h3>
+
+                    <p>
+                        A beautiful coastal beach with white sand,
+                        luxury resorts, and blue ocean water.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="images/nairobi.jpg" alt="Nairobi City">
+
+                <div class="card-content">
+
+                    <h3>Nairobi City</h3>
+
+                    <p>
+                        Kenya's capital city known for technology,
+                        modern buildings, and amazing nightlife.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Table -->
+    <section class="table-section">
+
+        <h2>Popular Kenyan Foods</h2>
+
+        <table>
+
+            <tr>
+                <th>Food</th>
+                <th>Origin</th>
+                <th>Popularity</th>
+            </tr>
+
+            <tr>
+                <td>Ugali</td>
+                <td>Kenya</td>
+                <td>★★★★★</td>
+            </tr>
+
+            <tr>
+                <td>Pilau</td>
+                <td>Coast</td>
+                <td>★★★★★</td>
+            </tr>
+
+            <tr>
+                <td>Nyama Choma</td>
+                <td>Kenya</td>
+                <td>★★★★★</td>
+            </tr>
+
+            <tr>
+                <td>Chapati</td>
+                <td>East Africa</td>
+                <td>★★★★☆</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <!-- Quote -->
+    <section class="quote">
+
+        “Kenya is not just a country, it is an experience full of beauty and greatness.”
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>Created By Moses Kimani</p>
+
+        <p>HTML & CSS Professional Project</p>
+
+    </footer>
+
+</body>
+</html>
